@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DangkiKhoaHoc</class>
+ <widget class="QMainWindow" name="DangkiKhoaHoc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DangkiKhoaHoc</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font: 700 11pt &quot;Times New Roman&quot;;
+}
+QWidget#DangkiKhoaHoc {
+    background-color: #DDFFBC
+}
+
+/* LineEdit Styles */
+QLineEdit {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #0078d7;
+}
+
+/* PushButton Styles */
+QPushButton {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #FEFFDE;
+    color: #000000;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #FFD79A;
+}
+
+QPushButton:pressed {
+    background-color: #004494;
+}
+
+/* TableWidget Styles */
+QTableWidget {
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QHeaderView::section {
+    background-color: #FFFAC0;
+    color: #9DE6E8;
+    padding: 5px;
+    border: 1px solid #c4c4c4;
+}
+
+QTableWidget::item {
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #FFD79A;
+    color: #FFFAC0;
+}
+
+QTableWidget::item:hover {
+    background-color: #FFD79A;
+}
+
+/* ScrollBar Styles */
+QScrollBar:vertical {
+    border: none;
+    background: #f0f0f0;
+    width: 12px;
+    margin: 15px 0 15px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #c4c4c4;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="matkhau">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>210</y>
+      <width>271</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Password</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nhaplaimatkhau">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>271</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>RePassword</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Taikhoan">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>180</y>
+      <width>271</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Tài Khoản</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>11</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>ĐĂNG NHẬP</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dk">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>280</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ĐĂNG Kí</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>320</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bạn Đã có Tài Khoản !?</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dk_to_dn">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>310</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Đăng Nhập</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ten">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>150</y>
+      <width>271</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Tài Khoản</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>590</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,12 @@
+{
+    "files": [
+        "DoanhThu.ui",
+        "GiangVien.ui",
+        "Guimain.ui",
+        "HocPhi.ui",
+        "KhoaHoc.ui",
+        "LopHoc.ui",
+        "TaiLieu.ui",
+        "form.ui"
+    ]
+}

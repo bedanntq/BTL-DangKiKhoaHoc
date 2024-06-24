@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DangKiHocVien</class>
+ <widget class="QWidget" name="DangKiHocVien">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Đăng Kí Học Viên</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font: 700 11pt &quot;Times New Roman&quot;;
+}
+QWidget#DangKiHocVien {
+    background-color: #DDFFBC
+}
+
+/* LineEdit Styles */
+QLineEdit {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #0078d7;
+}
+
+/* PushButton Styles */
+QPushButton {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #FEFFDE;
+    color: #000000;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #FFD79A;
+}
+
+QPushButton:pressed {
+    background-color: #004494;
+}
+
+/* TableWidget Styles */
+QTableWidget {
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QHeaderView::section {
+    background-color: #FFFAC0;
+    color: #9DE6E8;
+    padding: 5px;
+    border: 1px solid #c4c4c4;
+}
+
+QTableWidget::item {
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #FFD79A;
+    color: #FFFAC0;
+}
+
+QTableWidget::item:hover {
+    background-color: #FFD79A;
+}
+
+/* ScrollBar Styles */
+QScrollBar:vertical {
+    border: none;
+    background: #f0f0f0;
+    width: 12px;
+    margin: 15px 0 15px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #c4c4c4;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+/* QDateEdit Styles */
+QDateEdit {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+}
+QDateEdit:focus {
+    border: 2px solid #0078d7;
+}
+/* ComboBox Styles */
+QComboBox {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+    min-width: 6em;
+}
+
+QComboBox:focus {
+    border: 2px solid #0078d7;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox::down-arrow {
+    image: url(down_arrow.png); /* Thay đổi icon mũi tên nếu cần */
+}
+
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+    selection-background-color: #FFD79A;
+}
+/* GroupBox Styles */
+QGroupBox {
+    border: 2px solid #FFD79A;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #FEFFDE;
+    padding: 10px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+	top: 5px;
+    padding: 0 3px;
+    background-color: #FFD79A;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 14pt;
+    font-weight: bold;
+}
+</string>
+  </property>
+  <widget class="QFrame" name="frame_chucnang">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>160</y>
+     <width>981</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="layoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>0</y>
+      <width>661</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QPushButton" name="btn_them">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../icon/add.svg</normaloff>../../icon/add.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_xoa">
+       <property name="text">
+        <string>Delete</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../icon/delete.svg</normaloff>../../icon/delete.svg</iconset>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_capnhat">
+       <property name="text">
+        <string>update</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../icon/update.svg</normaloff>../../icon/update.svg</iconset>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_xoathongtin">
+       <property name="text">
+        <string>Clear</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../icon/clearall.svg</normaloff>../../icon/clearall.svg</iconset>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_tim">
+       <property name="text">
+        <string>Search</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../icon/search.svg</normaloff>../../icon/search.svg</iconset>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>10</y>
+     <width>1001</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Nhập Thông Tin Học Viên</string>
+   </property>
+   <widget class="QLineEdit" name="diachi">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>110</y>
+      <width>831</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Địa Chỉ</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="mahocvien">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>30</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Mã học viên</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ten">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>30</y>
+      <width>401</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Họ và Tên</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Gioitinh">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>30</y>
+      <width>122</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Giới Tính</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Giới Tính</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nữ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Khác</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="socccd">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>70</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Số Căn Cước</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sodienthoai">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>70</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Số Điện Thoại</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="email">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>70</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Email</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="ngaysinh">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>30</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>211</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>11</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="title">
+    <string>Thông Tin Cá Nhân</string>
+   </property>
+   <widget class="QPushButton" name="btn_dangxuat">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>130</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Đăng Xuất</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Role</string>
+    </property>
+    <widget class="QLineEdit" name="infor_role">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Name</string>
+    </property>
+    <widget class="QLineEdit" name="infor_username">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_6">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>190</y>
+     <width>1001</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Thông Tin Học Viên Đã Đăng Kí</string>
+   </property>
+   <widget class="QTableWidget" name="result_table">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>981</width>
+      <height>481</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>231</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Giao Diện Các Chức Năng</string>
+   </property>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>211</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Tra Cứu</string>
+    </property>
+    <widget class="QPushButton" name="btn_tracuuhocvien">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tra Cứu Học Viên</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_thongtinchung">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text">
+      <string>Thông Tin Chung</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_tracuukhoahoc">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tra Cứu Khóa Học</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_tracuulophoc">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>110</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tra Cứu Lớp Học</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>211</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Chức Năng Đăng Kí</string>
+    </property>
+    <widget class="QPushButton" name="btn_dangkikhoahoc">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text">
+      <string>Đăng Kí Khóa Học</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_lichsudangki">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text">
+      <string>Lịch Sử Đăng Kí</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_dangkihocvien">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text">
+      <string>Đăng Kí Học Viên</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>diachi</tabstop>
+  <tabstop>mahocvien</tabstop>
+  <tabstop>ten</tabstop>
+  <tabstop>Gioitinh</tabstop>
+  <tabstop>sodienthoai</tabstop>
+  <tabstop>socccd</tabstop>
+  <tabstop>email</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DangKi</class>
+ <widget class="QWidget" name="DangKi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Đăng Kí</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+/* Main Widget Background */
+QWidget#DangKi {
+    background-color: #DDFFBC;
+}
+
+/* LineEdit Styles */
+QLineEdit {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #0078d7;
+}
+
+/* PushButton Styles */
+QPushButton {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #FEFFDE;
+    color: #000000;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #FFD79A;
+}
+
+QPushButton:pressed {
+    background-color: #004494;
+}
+
+/* TableWidget Styles */
+QTableWidget {
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QHeaderView::section {
+    background-color: #FFFAC0;
+    color: #9DE6E8;
+    padding: 5px;
+    border: 1px solid #c4c4c4;
+}
+
+QTableWidget::item {
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #FFD79A;
+    color: #FFFAC0;
+}
+
+QTableWidget::item:hover {
+    background-color: #FFD79A;
+}
+
+/* ScrollBar Styles */
+QScrollBar:vertical {
+    border: none;
+    background: #f0f0f0;
+    width: 12px;
+    margin: 15px 0 15px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #c4c4c4;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* QDateEdit Styles */
+QDateEdit {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+}
+
+QDateEdit:focus {
+    border: 2px solid #0078d7;
+}
+
+/* ComboBox Styles */
+QComboBox {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+    min-width: 6em;
+}
+
+QComboBox:focus {
+    border: 2px solid #0078d7;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox::down-arrow {
+    image: url(down_arrow.png); /* Thay đổi icon mũi tên nếu cần */
+}
+
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    background-color: #FEFFDE;
+    font-size: 14px;
+    selection-background-color: #FFD79A;
+}
+
+/* TabWidget Styles */
+QTabWidget::pane {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    background-color: #FEFFDE;
+    padding: 10px;
+}
+
+QTabBar::tab {
+    background: #FFD79A;
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+QTabBar::tab:selected {
+    background: #9DE6E8;
+    color: #000000;
+}
+
+QTabBar::tab:!selected {
+    background: #FEFFDE;
+    color: #9DE6E8;
+}
+
+QTabBar::tab:hover {
+    background: #9DE6E8;
+    color: #FFFFFF;
+}
+
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+
+QTabBar::tab:left:selected {
+    border-right-color: none;
+}
+
+QTabBar::tab:right:selected {
+    border-left-color: none;
+}
+/* PlainTextEdit Styles */
+QPlainTextEdit {
+    border: 2px solid #FFD79A;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FEFFDE;
+    font-size: 13pt; /* Tăng cỡ chữ lên 16pt */
+    color: #000000; /* Màu chữ đen */
+}
+
+QPlainTextEdit:focus {
+    border: 2px solid #0078d7;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>621</width>
+     <height>461</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="title">
+    <string>ĐĂNG KÍ</string>
+   </property>
+   <widget class="QLineEdit" name="hovaten">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>110</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Họ Và Tên</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Taikhoan">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>190</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Tài Khoản</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dk_to_dn">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>350</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Đăng Nhập</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="matkhau">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>230</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Mật Khẩu</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>360</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Bạn Đã có Tài Khoản !?</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nhaplaimatkhau">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>270</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Nhập Lại Mật Khẩu</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dk">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>310</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ĐĂNG Kí</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>60</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>28</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>ĐĂNG KÍ</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="email">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>150</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Email</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
